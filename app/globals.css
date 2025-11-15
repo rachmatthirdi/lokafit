@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  
+  /* Primary Brand Colors - Modern Blue */
+  --color-primary: #0066ff;
+  --color-primary-light: #e6f0ff;
+  --color-primary-dark: #0052cc;
+  
+  /* Neutrals - Clean minimal */
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-border: #e5e7eb;
+  --color-foreground: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-muted-light: #d1d5db;
+  
+  /* Accents */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-heart: #ef4444;
+  --color-bookmark: #1a1a1a;
+  
+  --radius: 12px;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+* {
+  @apply transition-colors duration-200;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-muted));
+}
+
+/* Mobile viewport adjustments */
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 80px;
+  }
+}
