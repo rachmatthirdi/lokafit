@@ -153,9 +153,9 @@ const AppHeader = () => (
         <div className="w-20 h-auto bg-transparent flex items-center justify-center">
           <img src="/logo/logo.png" alt="LokaFit Logo" />
         </div>
-        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-semibold">
+        <Link href="/profile" className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-semibold">
           WY
-        </div>
+        </Link>
       </div>
     </div>
   </div>
